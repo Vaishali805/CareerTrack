@@ -1,0 +1,132 @@
+.sidebar {
+  width: 250px;
+  background-color: white;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-normal);
+  z-index: 90;
+}
+
+.sidebar-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: var(--space-4) 0;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: var(--space-1);
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-gray-700);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  border-left: 3px solid transparent;
+  position: relative;
+}
+
+.sidebar-nav a:hover {
+  background-color: var(--color-gray-100);
+  color: var(--color-primary-700);
+}
+
+.sidebar-nav a.active {
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-700);
+  border-left-color: var(--color-primary-600);
+  font-weight: 500;
+}
+
+.sidebar-icon {
+  margin-right: var(--space-3);
+  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-footer {
+  padding: var(--space-4);
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.add-application-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+}
+
+.badge-count {
+  position: absolute;
+  right: var(--space-4);
+  background-color: var(--color-warning-500);
+  color: white;
+  font-size: 0.75rem;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .sidebar-nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .sidebar-nav li {
+    margin-bottom: 0;
+  }
+  
+  .sidebar-nav a {
+    flex-direction: column;
+    text-align: center;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    padding: var(--space-2);
+  }
+  
+  .sidebar-nav a.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--color-primary-600);
+  }
+  
+  .sidebar-icon {
+    margin-right: 0;
+    margin-bottom: var(--space-1);
+  }
+  
+  .sidebar-footer {
+    display: none;
+  }
+  
+  .badge-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

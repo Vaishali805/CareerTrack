@@ -1,0 +1,112 @@
+.applications-container {
+  animation: fadeIn var(--transition-normal);
+}
+
+.applications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.applications-actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.applications-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.sort-select {
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+}
+
+.sort-direction {
+  padding: var(--space-1) var(--space-2);
+  font-size: 1.25rem;
+  min-width: auto;
+}
+
+.applications-count {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-4);
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8) 0;
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.empty-state h2 {
+  margin-bottom: var(--space-2);
+  color: var(--color-gray-900);
+}
+
+.empty-state p {
+  margin-bottom: var(--space-6);
+  color: var(--color-gray-600);
+}
+
+.no-results {
+  text-align: center;
+  background-color: var(--color-gray-50);
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+  color: var(--color-gray-600);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 1.125rem;
+  color: var(--color-gray-600);
+}
+
+@media (max-width: 768px) {
+  .applications-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+  
+  .applications-actions {
+    width: 100%;
+  }
+  
+  .applications-sort {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+  
+  .applications-count {
+    margin-top: var(--space-2);
+  }
+}

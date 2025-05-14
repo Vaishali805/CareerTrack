@@ -1,0 +1,126 @@
+.navbar {
+  background-color: var(--color-primary-700);
+  color: white;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 var(--space-4);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.logo-text {
+  margin-left: var(--space-2);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-end {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.navbar-email {
+  font-size: 0.875rem;
+  color: var(--color-gray-100);
+}
+
+.navbar-logout {
+  background-color: var(--color-primary-800);
+  color: white;
+  border: none;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  font-size: 0.875rem;
+}
+
+.navbar-logout:hover {
+  background-color: var(--color-primary-900);
+}
+
+.navbar-mobile-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.navbar-mobile-toggle span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar-mobile-toggle {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 64px;
+    right: -100%;
+    width: 70%;
+    height: calc(100vh - 64px);
+    background-color: var(--color-primary-700);
+    flex-direction: column;
+    transition: right 0.3s ease;
+    justify-content: flex-start;
+    padding: var(--space-4);
+  }
+
+  .navbar-menu.active {
+    right: 0;
+  }
+
+  .navbar-end {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navbar-logout {
+    width: 100%;
+    margin-top: var(--space-2);
+  }
+}
+
+/* Animation for mobile menu toggle */
+.navbar-mobile-toggle.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.navbar-mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-mobile-toggle.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}

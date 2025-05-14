@@ -1,0 +1,41 @@
+.application-form-page {
+  animation: fadeIn var(--transition-normal);
+}
+
+.application-form-header {
+  margin-bottom: var(--space-6);
+}
+
+.application-form-header h1 {
+  margin-bottom: var(--space-2);
+}
+
+.application-form-header p {
+  color: var(--color-gray-600);
+}
+
+.application-not-found {
+  text-align: center;
+  padding: var(--space-8) 0;
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.application-not-found h2 {
+  margin-bottom: var(--space-2);
+}
+
+.application-not-found p {
+  margin-bottom: var(--space-6);
+  color: var(--color-gray-600);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 1.125rem;
+  color: var(--color-gray-600);
+}

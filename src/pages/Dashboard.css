@@ -1,0 +1,148 @@
+.dashboard-container {
+  animation: fadeIn var(--transition-normal);
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.dashboard-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.dashboard-chart-card {
+  padding: var(--space-4);
+}
+
+.dashboard-chart-card h3 {
+  margin-bottom: var(--space-4);
+  font-size: 1.125rem;
+  color: var(--color-gray-700);
+}
+
+.chart-container {
+  width: 100%;
+  height: 300px;
+}
+
+.dashboard-deadlines {
+  margin-bottom: var(--space-6);
+}
+
+.deadlines-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.deadlines-header h3 {
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  color: var(--color-gray-700);
+}
+
+.deadlines-list {
+  list-style: none;
+  padding: 0;
+}
+
+.deadline-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.deadline-item:last-child {
+  border-bottom: none;
+}
+
+.deadline-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.deadline-company {
+  font-weight: 500;
+  color: var(--color-gray-900);
+}
+
+.deadline-role {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+}
+
+.deadline-date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.deadline-date {
+  font-weight: 500;
+}
+
+.deadline-days {
+  font-size: 0.75rem;
+  color: var(--color-gray-600);
+}
+
+.deadline-soon {
+  color: var(--color-warning-600);
+}
+
+.deadline-past {
+  color: var(--color-error-600);
+}
+
+.deadline-upcoming {
+  color: var(--color-primary-600);
+}
+
+.no-deadlines {
+  padding: var(--space-4);
+  text-align: center;
+  color: var(--color-gray-500);
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8) 0;
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.empty-state h2 {
+  margin-bottom: var(--space-2);
+  color: var(--color-gray-900);
+}
+
+.empty-state p {
+  margin-bottom: var(--space-6);
+  color: var(--color-gray-600);
+}
+
+@media (max-width: 1024px) {
+  .dashboard-charts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+}
